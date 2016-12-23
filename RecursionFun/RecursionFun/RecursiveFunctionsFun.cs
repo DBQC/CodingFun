@@ -8,7 +8,7 @@ namespace RecursionFun
 {
     class RecursiveFunctionsFun
     {
-        
+
         static void Main(string[] args)
         {
             Console.WriteLine("How many Fibonacci numbers to print?");
@@ -59,17 +59,17 @@ namespace RecursionFun
         /// <returns></returns>
         private static List<long> Fibonacci(long amount)
         {
-            long m = 0;
-            long n = 1;
-            List<long> fibonacciNumbers = new List<long>(new long[] { m, n });
+            List<long> fibonacciNumbers = new List<long>(new long[] { 0, 1 });
+            if (amount <= 0)
+                return new List<long>();
             if (amount == 1)
-            {
                 fibonacciNumbers.RemoveAt(1);
-                return fibonacciNumbers;
-            }
-            for (long i = 2; i < amount; i++)
+            else
             {
-                fibonacciNumbers.Add(fibonacciNumbers.Last() + fibonacciNumbers[fibonacciNumbers.Count - 2]);
+                for (long i = 2; i < amount; i++)
+                {
+                    fibonacciNumbers.Add(fibonacciNumbers.Last() + fibonacciNumbers[fibonacciNumbers.Count - 2]);
+                }
             }
             return fibonacciNumbers;
         }

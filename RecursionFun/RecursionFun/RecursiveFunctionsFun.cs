@@ -55,7 +55,7 @@ namespace RecursionFun
         /// <summary>
         /// Returns the Fibonacci numbers from the Fibonacci sequence starting from the beginning.
         /// </summary>
-        /// <param name="amount">Amount of Fibonacci numbers to return</param>
+        /// <param name="amount">The Amount of Fibonacci numbers to return</param>
         /// <returns></returns>
         private static List<long> Fibonacci(long amount)
         {

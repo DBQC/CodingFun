@@ -9,9 +9,10 @@ namespace CodingExamples
     {
         static void Main(string[] args)
         {
-            var number = int.Parse(args[0]);
+            int number;
+            var DidItWork = int.TryParse(args[0],out number);
 
-            var result = true;
+            bool result = true;
 
             for (long i = 2; i < number; i++)
             {

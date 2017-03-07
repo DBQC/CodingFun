@@ -23,6 +23,11 @@ namespace CodingExamples
             }             
             Console.WriteLine(result);
         }
+
+        public string CombineWithSeperator(this string string1, string string2,char seperator)
+        {
+            return string1 + seperator + string2;
+        }
     }
 
     

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CodingExamples
 {
@@ -9,6 +10,8 @@ namespace CodingExamples
     {
         static void Main(string[] args)
         {
+            Regex regex = new Regex(@"\\UploadedDocs\\");
+            Console.WriteLine(ReferenceEquals(@"\\UploadedDocs\\", "\\\\UploadedDocs\\\\"));
             var number = int.Parse(args[0]);
 
             var result = true;
@@ -23,13 +26,14 @@ namespace CodingExamples
             }             
             Console.WriteLine(result);
         }
-
-        public string CombineWithSeperator(this string string1, string string2,char seperator)
+     }
+    public static class StringExtentions
+    {
+        public static string CombineWithSeperator(this string string1, string string2, char seperator)
         {
             return string1 + seperator + string2;
         }
     }
-
-    
+        
 }
     

@@ -28,3 +28,5 @@
 *.out
 *.app
 RecursionFun/RecursionFun/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+CodingExamples/CodingExamples/bin/
+CodingExamples/CodingExamples/obj/

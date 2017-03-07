@@ -28,6 +28,13 @@ namespace CodingExamples
         {
             return string1 + seperator + string2;
         }
+
+        public string LastNCharacters(string input)
+        {
+            return input.Substring(input.Length - 3, 3);
+        }
+
+
     }
 
     

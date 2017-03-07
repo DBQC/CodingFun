@@ -24,9 +24,15 @@ namespace CodingExamples
             Console.WriteLine(result);
         }
 
-        public string CombineWithSeperator(this string string1, string string2,char seperator)
+        public string CombineWithSeperator(this string[] stringarray,char seperator)
         {
-            return string1 + seperator + string2;
+            string result= "";
+            foreach (string item in stringarray)
+            {
+                result += item + seperator;
+            }
+            return result.TrimEnd(seperator);
+            
         }
     }
 
